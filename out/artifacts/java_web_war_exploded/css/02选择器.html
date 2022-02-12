@@ -1,0 +1,35 @@
+<!-- 优先级：id选择器>类选择器>标签选择器 
+行内样式>行外样式，行外样式的几种方式遵从就近原则
+	精确度越高，权重越高 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS选择器</title>
+		<style type="text/css">
+			/* 标签选择器 选择对应种类的标签*/
+			/* p标签 */
+			p{
+				color:purple;
+			}
+			
+			/* id选择器 选择标签对应的id*/
+			/* id=p1 */
+			#p1{
+				color:pink;
+			}
+			
+			/* 类选择器 */
+			/* class=p2 */
+			.p2{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- id不能相同，类可以相同 -->
+		<p id="p1">段落标签</p>
+		<p id="p2" class="p2">段落标签2号</p>
+		<p class="p2">段落标签3号</p>
+	</body>
+</html>

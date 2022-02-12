@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script type="text/javascript">
+      window.onload = function (){
+          //创建标签对象
+          var divObj = document.createElement("div");
+
+          // 标签对象添加内容
+          divObj.innerHTML="dsgfahufhsuvhuofs";
+
+          // 将标签添加到body标签中
+          // 注：直接运行这句话，由于按顺序运行，还没有生成body标签，所以会出错，要将其放在动态注册方法中
+          document.body.appendChild(divObj);
+
+
+          //创建文本节点对象
+          var textNodeObj = document.createTextNode("sb");
+          //将文本节点对象添加到body标签里
+          document.body.appendChild(textNodeObj);
+      }
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

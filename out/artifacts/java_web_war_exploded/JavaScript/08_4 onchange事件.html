@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script type="text/javascript">
+			function onchangeFun(){
+				//控制台对象，由JavaScript提供像浏览器的控制器打印输出，用于测试使用
+				//log是打印的方法
+				alert(" static register:options have changed");
+			}
+	
+			// onblur事件动态注册，是固定写法
+	        window.onload = function (){
+			  //         动态注册步骤：
+			  //             1.获取标签对象
+			  var selectobj = document.getElementById("select")
+			  //             2.标签对象.事件名=function（）{}
+			  selectobj.onchange=function(){
+                  alert("dynamic register:options have changed");
+			  }
+			  
+	        }
+		</script>
+</head>
+<body>
+		please select:
+		静态注册onchange事件
+		<select onchange="onchangeFun()">
+			<option value="">a</option>
+			<option value="">b</option>
+			<option value="">c</option>
+			<option value="">d</option>
+		</select>
+        <br>
+		please select:
+		动态注册onchange事件
+		<select id="select">
+			<option value="">a</option>
+			<option value="">b</option>
+			<option value="">c</option>
+			<option value="">d</option>
+		</select>
+</body>
+</html>

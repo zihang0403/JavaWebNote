@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript">
+		function checkAll(){//全选
+			//getElementsByTagName返回的是一个集合，操作方法和数组类似
+			//属性：length 集合中元素个数
+			//集合中每个元素都是dom对象
+			var inputs = document.getElementsByTagName("input");
+			//checked，CheckBox标签属性，表示该复选框的选中状态，选中TRUE，未选中FALSE
+			for (var i = 0; i < inputs.length; i++) {
+				inputs[i].checked=true;
+			}
+		}
+		function checkNo(){//全不选
+			//getElementsByName,按照标签名查询并返回集合
+			// 返回的是一个集合，操作方法和数组类似
+			//属性：length 集合中元素个数
+			//集合中每个元素都是dom对象
+			var inputs = document.getElementsByTagName("input");
+			//checked，CheckBox标签属性，表示该复选框的选中状态，选中TRUE，未选中FALSE
+			for (var i = 0; i < inputs.length; i++) {
+				inputs[i].checked=false;
+			}
+		}
+		function checkReverse(){//反选
+			//getElementsByName返回的是一个集合，操作方法和数组类似
+			//属性：length 集合中元素个数
+			//集合中每个元素都是dom对象,元素顺序是HTML页面中从上到下的顺序
+			var inputs = document.getElementsByTagName("input");
+			//checked，CheckBox标签属性，表示该复选框的选中状态，选中TRUE，未选中FALSE
+			for (var i = 0; i < inputs.length; i++) {
+				inputs[i].checked=!inputs[i].checked;
+			}
+		}
+
+	</script>
+</head>
+<body>
+<input type="checkbox"  value="cpp" />C++
+<input type="checkbox"  value="java" />Java
+<input type="checkbox"  value="js" />JavaScript
+<input type="checkbox"  value="py"  />Python
+<br>
+<button type="button" onclick="checkAll()">全选</button>
+<button type="button" onclick="checkNo()">全不选</button>
+<button type="button" onclick="checkReverse()">反选</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script type="text/javascript">
+		function onclickFun(){
+			alert("静态注册onclick事件");
+		}
+
+        // onclick事件动态注册，是固定写法
+        window.onload = function (){
+          //         动态注册步骤：
+//        1.获取标签对象
+          var btnobj = document.getElementById("but2");
+//        2.标签对象.事件名=function（）{}
+          btnobj.onclick=function (){
+            alert("动态注册onclick事件");
+          }
+
+        }
+	</script>
+</head>
+<body>
+<!--静态注册onclick事件-->
+    <button onclick="onclickFun()" id="but1">按钮1</button>
+    <button id="but2">按钮2</button>
+</body>
+</html>

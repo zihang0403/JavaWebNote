@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script type="text/javascript">
+	//static register form sumbit event
+	function onsubmitFun(){
+		alert("static register event");
+
+		return false;//阻止表单提交
+	}
+
+	// onblur事件动态注册，是固定写法
+	window.onload = function (){
+		//         动态注册步骤：
+		//             1.获取标签对象
+		var formobj = document.getElementById("dynamicRegister")
+		//             2.标签对象.事件名=function（）{}
+		formobj.onsubmit=function(){
+			alert("dynamic register:options have changed");
+		}
+
+	}
+	</script>
+</head>
+<body>
+<!--	"return false" can stop form submit-->
+	<form action="http://localhost:8080" method="post" onsubmit="return onsubmitFun()">
+		<input type="submit" value="staticRegister"/>
+	</form>
+
+	<form action="http://localhost:8080" method="post" id="dynamicRegister">
+		<input type="submit" value="dynamicRegister" />
+	</form>
+</body>
+</html>

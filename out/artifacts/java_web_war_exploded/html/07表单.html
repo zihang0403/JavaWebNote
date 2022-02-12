@@ -1,0 +1,27 @@
+<!-- 表单用于登录 注册 搜索，文件上传，前后交互 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<!-- 表单 -->
+		<form >
+			<!-- input输入
+				type 类型：text：文本框 value值自动获取
+					password：密码框 value值自动获取
+					radio:单选按钮 name属性一致时为一组，组内互斥 value值用于前后交互 checked默认选择
+					checkbox:多选按钮 name属性一致时为一组 -->
+			用户名：<input type="text" placeholder="请输入你的用户名" name="user"><br>
+			密&emsp;码：<input type="password" placeholder="请输入密码" name="pwd"><br>
+			<!-- label标签：提高用户的体验度，将标签与按钮id绑定，点击标签文字即可选择按钮 -->
+			性&emsp;别:	<label for="male">男</label><input type="radio" name="sex" value="male" id="male" checked>
+						<label for="female">女</label><input type="radio" name="sex" value="female" id="female"><br>
+			爱&emsp;好:	<input type="checkbox" name="hobby" value="c" id="c"><label for="c">写c语言</label>
+						<input type="checkbox" name="hobby" value="java">写java
+						<input type="checkbox" name="hobby" value="python">写python
+			<input type="submit" value="提交">
+		</form>
+	</body>
+</html>

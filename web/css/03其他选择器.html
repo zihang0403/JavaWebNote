@@ -1,0 +1,94 @@
+<!-- 群组选择器
+	全选择器
+	层次选择器
+		后代选择器
+		子代选择器
+	兄弟选择器、相邻兄弟选择器
+	属性选择器
+	伪类选择器-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>其他选择器</title>
+		<style>
+		/* 群组选择器 */
+			.p,ul{
+				color:red;
+			}
+			/* 全选择器 */
+			*{
+				color: yellowgreen;
+			}
+			
+			/* 层次选择器 */
+			/* 后代选择器 可继承text,font,line,color等元素*/
+			/* div ul{
+				list-style: none;
+			} */
+			/* 子代选择器 不可继承*/
+			div>ul{
+				list-style: none;
+			}
+			/* 代码的执行顺序：从上往下 */
+			/* 兄弟选择器 */
+			/* h2~p{
+				color: aqua;
+			} */
+			
+			/* 相邻兄弟选择器 */
+			p+h2{
+				color: #00FFFF;
+			}
+			
+			/* 属性选择器：input */
+			/* 属性选择：有name值的p标签 */
+			p[name]{
+				color: #FFC0CB;
+			}
+			
+			/* 伪类选择器 
+				未访问过的样式
+				访问过的样式
+				划过的样式
+				激活的样式*/
+			/* 未访问 */
+			a:link{
+				color: #00FFFF;
+			}
+			/* 划过 */
+			a:hover{
+				color: #FF0000;
+			}
+			/* 激活：点击不松开 */
+			a:active{
+				color: #9ACD32;
+			}
+			/* 访问过 */
+			a:visited{
+				color: aquamarine;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+		<p>段落标签1</p>
+			<h2>二级标题</h2>
+		<p name="p2">段落标签2</p>
+		<p name="p1">段落标签3</p>
+		<ul class="ul1">
+			<li>1111
+				<ul class="ul2">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</li>
+			<li>2222</li>
+			<li>3333</li>
+		</ul>
+		</div>
+		<a href="www.baidu.com">超链接标签</a>
+	</body>
+</html>
