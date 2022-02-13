@@ -7,18 +7,60 @@
     <!--    servlet标签给Tomcat配置一个Servlet程序-->
     <servlet>
         <!--        servlet-name标签 给Servlet程序起一个别名（一般是类名）-->
-        <servlet-name>HelloServlet</servlet-name>
+        <servlet-name>HelloServlet01</servlet-name>
         <!--servlet-class是Servlet程序的全类名-->
         <servlet-class>com.zi.Servlet.HelloServlet01</servlet-class>
     </servlet>
-
-    <!--    servlet-mapping标签给Servlet标签程序配置访问地址-->
+    <!--servlet-mapping标签给Servlet标签程序配置访问地址-->
     <servlet-mapping>
         <!--        servlet-name标签的作用是告诉服务器，我当前配置的地址给哪个Servlet服务器使用-->
-        <servlet-name>HelloServlet</servlet-name>
+        <servlet-name>HelloServlet01</servlet-name>
         <!--        url-pattern标签配置访问地址-->
         <!--        / 斜杠在服务器解析的时候，表示地址为：http://ip.port/工程路径-->
         <!--        /hello 表示地址为：http://ip.port/工程路径/hello,即给这个Servlet程序一个访问地址-->
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+	
+	<servlet>
+        <!--servlet-name标签 给Servlet程序起一个别名（一般是类名）-->
+		<servlet-name>HelloHttpServlet02</servlet-name>
+        <!--servlet-class是Servlet程序的全类名-->
+        <servlet-class>com.zi.Servlet.HelloHttpServlet02</servlet-class>
+	</servlet>
+    <!--servlet-mapping标签给Servlet标签程序配置访问地址-->
+    <servlet-mapping>
+        <!--servlet-name标签的作用是告诉服务器，我当前配置的地址给哪个Servlet服务器使用-->
+        <servlet-name>HelloHttpServlet02</servlet-name>
+        <!--        url-pattern标签配置访问地址-->
+        <!--        / 斜杠在服务器解析的时候，表示地址为：http://ip.port/工程路径-->
+        <!--        /hello 表示地址为：http://ip.port/工程路径/hello,即给这个Servlet程序一个访问地址-->
+        <url-pattern>/hello02</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ServletConfig04</servlet-name>
+        <servlet-class>com.zi.Servlet.ServletConfig04</servlet-class>
+
+<!--        init-name是初始化参数-->
+        <init-param>
+<!--            是参数名-->
+            <param-name>url</param-name>
+<!--            是参数值-->
+            <param-value>jdbc:mysql://localhost:3306/test</param-value>
+        </init-param>
+
+        <!--        init-name是初始化参数-->
+        <init-param>
+            <!--            是参数名-->
+            <param-name>username</param-name>
+            <!--            是参数值-->
+            <param-value>root</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletConfig04</servlet-name>
+        <url-pattern>/hello03</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
