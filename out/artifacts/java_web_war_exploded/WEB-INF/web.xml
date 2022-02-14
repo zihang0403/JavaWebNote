@@ -4,6 +4,17 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+<!--    context-param是上下文参数（属于整个web工程），可以配置多组-->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>context</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>username02</param-name>
+        <param-value>context02</param-value>
+    </context-param>
+
     <!--    servlet标签给Tomcat配置一个Servlet程序-->
     <servlet>
         <!--        servlet-name标签 给Servlet程序起一个别名（一般是类名）-->
@@ -61,6 +72,15 @@
     <servlet-mapping>
         <servlet-name>ServletConfig04</servlet-name>
         <url-pattern>/hello03</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ServletContext05</servlet-name>
+        <servlet-class>com.zi.Servlet.ServletContext05</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletContext05</servlet-name>
+        <url-pattern>/hello05</url-pattern>
     </servlet-mapping>
     
 </web-app>
